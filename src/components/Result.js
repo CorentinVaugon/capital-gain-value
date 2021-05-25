@@ -8,20 +8,37 @@ class Result extends React.Component {
   }
 
   calculMostValue() {
-    console.log(this.props)
     if(this.props.totalWalletValue !== 0) {
-      return this.props.priceSell - (this.props.priceBuy * this.props.priceSell / this.props.totalWalletValue)
+      const result = this.props.priceSell - (this.props.priceBuy * this.props.priceSell / this.props.totalWalletValue)
+
+      // get 2 digit after .
+      return result.toFixed(2)
     }
 
     return 0
   }
+
+  handleColor(value) {
+    let color = 'text-gray-500'
+    if(value > 0) {
+      color = 'text-green-500'
+    }
+    else if(value < 0) {
+      color = 'text-red-500'
+    }
+
+    return color
+  }
   
   render() {
     let result = this.calculMostValue()
-    console.log(result)
+    let color = this.handleColor(result)
+
     return (
-      <div>
-          {result}
+      <div className={`flex justify-center items-center ${this.props.className}`}>
+        <p className={`text-8xl ${color}`}>
+          { result } €
+        </p>
       </div>
     )
   }

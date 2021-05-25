@@ -1,5 +1,7 @@
 import React from "react";
 
+import '../style/form.css'
+
 class Form extends React.Component {
   constructor(props) {
     super(props);
@@ -24,20 +26,23 @@ class Form extends React.Component {
 
   render() {
     return (
-      <form>
-        <label>
-          Price to sell:
-          <input type="text" name="priceSell" value={this.state.priceSell} onChange={this.handleInputChange}/>
+      <form className={`text-4xl leading-10 text-gray-500 ${this.props.className}`}>
+        <label className="mb-5 block">
+          <p className="inline">You sell at </p>
+          <input className="bg-transparent border-b border-gray-500" type="text" name="priceSell" value={this.state.priceSell} onChange={this.handleInputChange}/>
+          <p className="inline">€</p>
         </label>
 
-        <label>
-          Price to buy:
-          <input type="text" name="priceBuy" value={this.state.priceBuy} onChange={this.handleInputChange}/>
+        <label className="mb-5 block">
+          <p className="inline"> and you bought it at </p>
+          <input className="bg-transparent border-b border-gray-500" type="text" name="priceBuy" value={this.state.priceBuy} onChange={this.handleInputChange}/>
+          <p className="inline">€</p>
         </label>
 
-        <label>
-          Total wallet Value:
-          <input type="text" name="totalWalletValue" value={this.state.totalWalletValue} onChange={this.handleInputChange}/>
+        <label className="mb-5 block">
+          <p className="inline">The total value of your wallet is </p>
+          <input className="bg-transparent border-b border-gray-500" type="text" name="totalWalletValue" value={this.state.totalWalletValue} onChange={this.handleInputChange}/>
+          <p className="inline">€</p>
         </label>
       </form>
     )
