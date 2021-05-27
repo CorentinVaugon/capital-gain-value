@@ -39,7 +39,7 @@ class Form extends React.Component {
 
   render() {
     return (
-      <form className={`text-4xl leading-10 text-gray-500 ${this.props.className}`}>
+      <form className={`text-xl md:text-4xl leading-10 text-gray-500 ${this.props.className}`}>
         <label className="mb-5 block">
           <p className="inline">You sell at </p>
           <input className="bg-transparent border-b border-gray-500" type="number" min={this.state.totalWalletValue} name="priceSell" value={this.state.priceSell} onChange={this.handleInputChange}/>

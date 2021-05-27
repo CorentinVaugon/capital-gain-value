@@ -38,7 +38,7 @@ class Result extends React.Component {
       let color = this.handleColor(result)
 
       return ( 
-        <p className={`text-8xl ${color}`}>
+        <p className={`text-4xl md:text-6xl lg:text-8xl ${color}`}>
           {result} €
         </p>
       )

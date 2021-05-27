@@ -25,21 +25,27 @@ class App extends React.Component {
   render() {
     return (
       <div className="bg-gradient-to-r from-green-300 to-blue-600 h-screen overflow-hidden">
-        <header>Calcul Plus value</header>
+        <header className="pt-4 pl-8">
+          <h1 className="text-lg text-white">Calculate your added value</h1>
+        </header>
 
-        <div className="container mx-auto min-h-full relative">
-          <div className="is-elements flex justify-items-center absolute w-full top-1/2 bg-white bg-opacity-80 p-8 rounded-lg shadow-xl">
-            <Form className="w-8/12"
+        <div className="xl:container mx-4 xl:mx-auto min-h-full relative">
+          <div className="is-elements xl:flex justify-items-center absolute w-full top-1/2 bg-white bg-opacity-80 p-8 rounded-lg shadow-xl">
+            <Form className="xl:w-8/12"
               onChangeValue={this.handleFormValueChange}
             />
 
-            <Result className="w-4/12"
+            <Result className="xl:w-4/12"
               priceSell={this.state.priceSell}
               priceBuy={this.state.priceBuy}
               totalWalletValue={this.state.totalWalletValue}
             />
           </div>
         </div>
+
+        <footer className="fixed bottom-3 right-6">
+          <p className="text-lg text-white">Made by <a href="https://twitter.com/ZhyroSty">Zhyrosty</a> with &#128159;</p>
+        </footer>
       </div>
     );
   }
