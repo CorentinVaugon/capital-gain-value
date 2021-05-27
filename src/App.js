@@ -16,6 +16,7 @@ class App extends React.Component {
   }
 
   handleFormValueChange(name, value) {
+    value = value ? value : 0
     this.setState({
       [name]: value
     })
