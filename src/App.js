@@ -44,7 +44,7 @@ class App extends React.Component {
         </div>
 
         <footer className="fixed bottom-3 right-6">
-          <p className="text-lg text-white">Made by <a href="https://twitter.com/ZhyroSty">Zhyrosty</a> with &#128159;</p>
+          <p className="text-lg text-white">Made by <a rel="noreferrer" href="https://twitter.com/ZhyroSty" target="_blank">Zhyrosty</a> with &#128159;</p>
         </footer>
       </div>
     );
