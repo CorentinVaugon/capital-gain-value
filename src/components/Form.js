@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 import '../style/form.css'
 
@@ -32,9 +32,9 @@ class Form extends React.Component {
   }
 
   getError(inputName) {
-    if(inputName === "priceSell") {
+    if(inputName === 'priceSell') {
       // use extern function for this
-      let error = this.state.priceSell > this.state.totalWalletValue ? "Your price sell can't be higher than your total wallet value" : undefined
+      let error = this.state.priceSell > this.state.totalWalletValue ? 'Your price sell can\'t be higher than your total wallet value' : undefined
 
       if (error) {
         return <p className="text-xl text-red-500">{error}</p>
@@ -56,7 +56,7 @@ class Form extends React.Component {
             ref={this.priceSell}/>
 
           <p className="inline">€</p>
-          {this.getError("priceSell")}
+          {this.getError('priceSell')}
         </label>
 
         <label className="mb-5 block">
